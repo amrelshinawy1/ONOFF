@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script>src="phonegap.js"</script>
+        <script type="text/javascript">
+
+        $(document).ready(function(){
+            $("#ON").click(function(){
+     
+            $.ajax({
+                      url : 'http://127.0.0.1:4000/api/devices/testD1@dev',
+                      data : JSON.stringify({"properties":{"light":"ON"}}),
+                      type : 'PATCH',
+                      contentType : 'application/json',
+                      processData: false,
+                      dataType: 'json',
+                      headers:{
+                        "Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiZGV2IiwiZW1haWwiOiJkZXZAdGFudGEuZ2EiLCJhY3RpdmUiOnRydWUsImlhdCI6MTQ5ODAwOTUyOCwiZXhwIjoxNDk4NjE0MzI4LCJqdGkiOiIzZnRlNXJkOWR3ajQ2Yzcxb3YifQ.Mnr1cFm0f0T60qXIZ_YG98OqK3GRjhnAAPinU9-3kac",
+                        "Content-Type":"application/json"
+
+                      }
+                    });
+
+            });
+            $("#OFF").click(function(){
+     
+            $.ajax({
+                      url : 'http://127.0.0.1:4000/api/devices/testD1@dev',
+                      data : JSON.stringify({"properties":{"light":"OFF"}}),
+                      type : 'PATCH',
+                      contentType : 'application/json',
+                      processData: false,
+                      dataType: 'json',
+                      headers:{
+                        "Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiZGV2IiwiZW1haWwiOiJkZXZAdGFudGEuZ2EiLCJhY3RpdmUiOnRydWUsImlhdCI6MTQ5ODAwOTUyOCwiZXhwIjoxNDk4NjE0MzI4LCJqdGkiOiIzZnRlNXJkOWR3ajQ2Yzcxb3YifQ.Mnr1cFm0f0T60qXIZ_YG98OqK3GRjhnAAPinU9-3kac",
+                        "Content-Type":"application/json"
+
+                      }
+                    });
+
+            });
+			
+           
+        });    
+        </script>
+		<style>
+		.roundbutton{
+		  display:block;
+		  height: 150px;
+		  width: 150px;
+		  border-radius: 50%;
+		  border: 1px solid Black;
+		  border-width:10px;
+		  background-color: #100F0A;
+
+		}
+
+		.wrap { position: absolute;
+		  margin: auto;
+		  top: 0;
+		  right: 0;
+		  bottom: 0;
+		  left: 0;
+		  width: 150px;
+		  height: 300px;
+		  }
+		  .Green{
+		  border-color: #02FC66;
+		  }
+		  .red{
+		  border-color: #F83837;
+		  }
+		  .FontON{
+		  font-size:50px;
+		  color: #02FC66;
+		  }
+		  .FontOFF{
+		  font-size:50px;
+		  color: #F83837;
+		  }
+		</style>
+    </head>
+    
+    <body>
+		<div class="wrap">
+			<button id="ON"  class="roundbutton Green "><span class = "FontON">ON</span></button><br>
+			<button id="OFF"class="roundbutton red"> <span class = "FontOFF">OFF</span></button>
+		</div>
+    </body>
+</html>
