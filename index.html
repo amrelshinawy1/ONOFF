@@ -29,7 +29,7 @@
 		    var host =  '192.168.1.2';
 var port = 4000;
 var path = '/api/devices/testD1@dev';
-var url = host + ':' + port + path;
+var url = '//'+ host + ':' + port + path;
 var method = "PATCH";
 var postData = JSON.stringify({"properties":{"light":"ON"}});
 var headers = {
