@@ -14,7 +14,7 @@
             $("#ON").click(function(){
      
             $.ajax({
-                      url: 'https://' + host + ':' + port + path,
+                      url: 'http://' + host + ':' + port + path,
                       data : JSON.stringify({"properties":{"light":"ON"}}),
                       type : 'PATCH',
                       contentType : 'application/json',
@@ -31,7 +31,7 @@
             $("#OFF").click(function(){
      
             $.ajax({
-                      url: 'https://' + host + ':' + port + path,
+                      url: 'http://' + host + ':' + port + path,
                       data : JSON.stringify({"properties":{"light":"OFF"}}),
                       type : 'PATCH',
                       contentType : 'application/json',
