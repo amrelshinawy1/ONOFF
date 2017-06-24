@@ -8,10 +8,13 @@
         <script type="text/javascript">
 
         $(document).ready(function(){
+	var host =  '192.168.1.2';
+	var port = 4000;
+	var path = '/api/devices/testD1@dev';
             $("#ON").click(function(){
      
             $.ajax({
-                      url : 'http://127.0.0.1:4000/api/devices/testD1@dev',
+                      url: 'http://' + host + ':' + port + path,
                       data : JSON.stringify({"properties":{"light":"ON"}}),
                       type : 'PATCH',
                       contentType : 'application/json',
@@ -28,7 +31,7 @@
             $("#OFF").click(function(){
      
             $.ajax({
-                      url : 'http://127.0.0.1:4000/api/devices/testD1@dev',
+                      url: 'http://' + host + ':' + port + path,
                       data : JSON.stringify({"properties":{"light":"OFF"}}),
                       type : 'PATCH',
                       contentType : 'application/json',
