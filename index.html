@@ -27,7 +27,11 @@
                       },
 		      success:function(response){
 		    			console.log(response);
-	    		}
+	    		},
+		      error: function (xhr, ajaxOptions, thrownError) {
+			alert(xhr.status);
+			alert(thrownError);
+		      }
                     });
             });
             $("#OFF").click(function(){
@@ -46,7 +50,11 @@
                       },
 		      success:function(response){
 		    			console.log(response);
-	    		}
+	    		},
+		      error: function (xhr, ajaxOptions, thrownError) {
+			alert(xhr.status);
+			alert(thrownError);
+		      }
                     });
 
             });
