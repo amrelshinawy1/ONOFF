@@ -10,8 +10,8 @@
         $(document).ready(function(){
 	//var host =  '192.168.1.2';
 	var host =  'amr';	
-	var port = 4000;
-	var path = '/api/devices/testD1@dev';
+	var port = 5000;
+	var path = '/api/devices/bd1.light.control@amr';
             $("#ON").on('click touchstart',function(){
      
             $.ajax({
@@ -22,7 +22,7 @@
                       processData: false,
                       dataType: 'json',
                       headers:{
-                        "Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiZGV2IiwiZW1haWwiOiJkZXZAdGFudGEuZ2EiLCJhY3RpdmUiOnRydWUsImlhdCI6MTQ5ODAwOTUyOCwiZXhwIjoxNDk4NjE0MzI4LCJqdGkiOiIzZnRlNXJkOWR3ajQ2Yzcxb3YifQ.Mnr1cFm0f0T60qXIZ_YG98OqK3GRjhnAAPinU9-3kac",
+                        "Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiYW1yIiwiYWN0aXZlIjp0cnVlLCJ0eXBlIjoibG9naW4iLCJpYXQiOjE0OTk4MDY3MDQsImV4cCI6MTQ5OTgwNzYwNCwianRpIjoiMjJjd2wydW9qNTAyNnJlOCJ9.rTbMU1qVtBw2TMv4cRM-vlIquNkJWcXXT8pcEFa4Vv4",
                         "Content-Type":"application/json"
 
                       },
@@ -45,7 +45,7 @@
                       processData: false,
                       dataType: 'json',
                       headers:{
-                        "Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiZGV2IiwiZW1haWwiOiJkZXZAdGFudGEuZ2EiLCJhY3RpdmUiOnRydWUsImlhdCI6MTQ5ODAwOTUyOCwiZXhwIjoxNDk4NjE0MzI4LCJqdGkiOiIzZnRlNXJkOWR3ajQ2Yzcxb3YifQ.Mnr1cFm0f0T60qXIZ_YG98OqK3GRjhnAAPinU9-3kac",
+                        "Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiYW1yIiwiYWN0aXZlIjp0cnVlLCJ0eXBlIjoibG9naW4iLCJpYXQiOjE0OTk4MDY3MDQsImV4cCI6MTQ5OTgwNzYwNCwianRpIjoiMjJjd2wydW9qNTAyNnJlOCJ9.rTbMU1qVtBw2TMv4cRM-vlIquNkJWcXXT8pcEFa4Vv4",
                         "Content-Type":"application/json"
 
                       },
