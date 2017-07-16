@@ -6,25 +6,27 @@
         <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script>src="phonegap.js"</script>
         <script type="text/javascript">
-
         $(document).ready(function(){
 	//var host =  '192.168.1.2';
 	var host =  'amr';	
 	var port = 5000;
-	var path = '/api/devices/bd1.light.control@amr';
+	var path = '/api/streams';
             $("#ON").on('click touchstart',function(){
      
             $.ajax({
                       url: 'http://' + host + ':' + port + path,
-                      data : JSON.stringify({"properties":{"light":"ON"}}),
-                      type : 'PATCH',
+                      data : JSON.stringify({
+					      "owner":"amr",
+					      "device":"bd1.light.control",
+					      "data":{"light":"ON"}
+					}),
+                      type : 'POST',
                       contentType : 'application/json',
                       processData: false,
                       dataType: 'json',
                       headers:{
-                        "Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiYW1yIiwiYWN0aXZlIjp0cnVlLCJ0eXBlIjoibG9naW4iLCJpYXQiOjE0OTk5NTM3MzgsImV4cCI6MTUwMjM3MjkzOCwianRpIjoiMmthZXBvODQ4ajUyaHE3c2MifQ.J0Wie5P3g3aqkiQVokRi7EI4-u87iaOXyI0PF-RXC_s",
+                        "Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiYW1yIiwidHlwZSI6ImFwaWtleSIsImlhdCI6MTQ5OTg5Mjg0MSwianRpIjoiMjJjd2w2NzRqNTFoZ3o0MSJ9.XjWc5I12mu4s4tyX8NFPtX-kc9B55x-GxPwwT2Jxqvs",
                         "Content-Type":"application/json"
-
                       },
 		      success:function(response){
 		    			console.log(response);
@@ -39,15 +41,18 @@
      
             $.ajax({
                       url: 'http://' + host + ':' + port + path,
-                      data : JSON.stringify({"properties":{"light":"OFF"}}),
-                      type : 'PATCH',
+                      data : JSON.stringify({
+					      "owner":"amr",
+					      "device":"bd1.light.control",
+					      "data":{"light":"ON"}
+					}),
+                      type : 'POST',
                       contentType : 'application/json',
                       processData: false,
                       dataType: 'json',
                       headers:{
-                        "Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiYW1yIiwiYWN0aXZlIjp0cnVlLCJ0eXBlIjoibG9naW4iLCJpYXQiOjE0OTk5NTM3MzgsImV4cCI6MTUwMjM3MjkzOCwianRpIjoiMmthZXBvODQ4ajUyaHE3c2MifQ.J0Wie5P3g3aqkiQVokRi7EI4-u87iaOXyI0PF-RXC_s",
+                        "Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiYW1yIiwidHlwZSI6ImFwaWtleSIsImlhdCI6MTQ5OTg5Mjg0MSwianRpIjoiMjJjd2w2NzRqNTFoZ3o0MSJ9.XjWc5I12mu4s4tyX8NFPtX-kc9B55x-GxPwwT2Jxqvs",
                         "Content-Type":"application/json"
-
                       },
 		      success:function(response){
 		    			console.log(response);
@@ -57,7 +62,6 @@
 			console.log(thrownError);
 		      }
                     });
-
             });
 			
            
@@ -72,9 +76,7 @@
 		  border: 1px solid Black;
 		  border-width:10px;
 		  background-color: #100F0A;
-
 		}
-
 		.wrap { position: absolute;
 		  margin: auto;
 		  top: 0;
