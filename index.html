@@ -17,8 +17,8 @@
                       url: 'http://' + host + ':' + port + path,
                       data : JSON.stringify({
 					      "owner":"amr",
-					      "device":"mobile",
-					      "data":{"action":"ON"}
+					      "device":"bd1.light.control",
+					      "data":{"light":"ON"}
 					}),
                       type : 'POST',
                       contentType : 'application/json',
@@ -43,8 +43,8 @@
                       url: 'http://' + host + ':' + port + path,
                       data : JSON.stringify({
 					      "owner":"amr",
-					      "device":"mobile",
-					      "data":{"action":"OFF"}
+					      "device":"bd1.light.control",
+					      "data":{"light":"OFF"}
 					}),
                       type : 'POST',
                       contentType : 'application/json',
