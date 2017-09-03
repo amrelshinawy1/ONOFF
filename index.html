@@ -16,16 +16,16 @@
             $.ajax({
                       url: 'http://' + host + ':' + port + path,
                       data : JSON.stringify({
-					      "owner":"amr",
-					      "device":"bd1.light.control",
-					      "data":{"light":"ON"}
+					      "owner":"user",
+					      "device":"application",
+					      "data":{"action":"ON"}
 					}),
                       type : 'POST',
                       contentType : 'application/json',
                       processData: false,
                       dataType: 'json',
                       headers:{
-                        "Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiYW1yIiwidHlwZSI6ImFwaWtleSIsImlhdCI6MTUwMDM5NTEzMywianRpIjoiYXBlNTFoeGo1OXNpdXE0In0.wBOJlvBezupvu2e2wxq4EW-oAV3C5heOXNKAOvYWAJ8",
+                        "Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoidXNlciIsInR5cGUiOiJhcGlrZXkiLCJpYXQiOjE1MDQ0NDU3ODksImp0aSI6ImFwZTUxaW1qNzRzNmc5ZiJ9.qbPwDFYls_1BgXjLEL5m8h7gGbMM4VpgbaRtbp3_tuo",
                         "Content-Type":"application/json"
                       },
 		      success:function(response){
@@ -42,16 +42,16 @@
             $.ajax({
                       url: 'http://' + host + ':' + port + path,
                       data : JSON.stringify({
-					      "owner":"amr",
-					      "device":"bd1.light.control",
-					      "data":{"light":"OFF"}
+					      "owner":"user",
+					      "device":"application",
+					      "data":{"action":"OFF"}
 					}),
                       type : 'POST',
                       contentType : 'application/json',
                       processData: false,
                       dataType: 'json',
                       headers:{
-                        "Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiYW1yIiwidHlwZSI6ImFwaWtleSIsImlhdCI6MTUwMDM5NTEzMywianRpIjoiYXBlNTFoeGo1OXNpdXE0In0.wBOJlvBezupvu2e2wxq4EW-oAV3C5heOXNKAOvYWAJ8",
+                        "Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoidXNlciIsInR5cGUiOiJhcGlrZXkiLCJpYXQiOjE1MDQ0NDU3ODksImp0aSI6ImFwZTUxaW1qNzRzNmc5ZiJ9.qbPwDFYls_1BgXjLEL5m8h7gGbMM4VpgbaRtbp3_tuo",
                         "Content-Type":"application/json"
                       },
 		      success:function(response){
