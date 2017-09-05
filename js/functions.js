@@ -82,6 +82,11 @@ function sendAction(action, device) {
     },
     success: function (response) {
       console.log("request succeeded");
+      $("#dvPopSuccess").popup("open");
+      var popup = setTimeout(function(){
+         $("#dvPopSuccess").popup("close"); 
+          return false;
+      }, 1500);
     },
     error: function (xhr, ajaxOptions, thrownError) {
       console.log(xhr.status);

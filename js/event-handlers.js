@@ -1,5 +1,6 @@
 $(document).ready(function () {
   getDevices();
+  $("#dvPopSuccess").enhanceWithin().popup();
   // panel close and open
   $("#dvPanel1").panel().enhanceWithin();
   $(document).on("swipeleft swiperight", "body", function (e) {
