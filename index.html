@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Galliot Demo</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="jquery.mobile-1.4.5/jquery.mobile-1.4.5.css">
+    <script type="application/javascript" src="jquery.mobile-1.4.5/jquery.js"></script>
+    <script type="application/javascript" src="jquery.mobile-1.4.5/jquery.mobile-1.4.5.js"></script>
+</head>
+
+<body>
+
+    <!-- ==================== panel ==================== -->
+
+    <div data-role="panel" id="dvPanel1" data-display="overlay" data-theme="b" class="ui-responsive-panel" data-position-fixed="true">
+        <ul data-role="listview" class="ui-content" data-theme="b">
+            <li><a data-transition="none" href="#dvHome" class="ui-btn ui-btn">Home</a></li>
+            <li><a data-transition="none" href="#dvHall" class="ui-btn">Hall</a></li>
+            <li><a data-transition="none" href="#dvKitchen" class="ui-btn">Kitchen</a></li>
+            <li><a data-transition="none" href="#dvBathroom" class="ui-btn">Bathroom</a></li>
+            <li><a data-transition="none" href="#dvBedroom" class="ui-btn">Bedroom</a></li>
+        </ul>
+
+    </div>
+
+    <!-- ==================== Home page ==================== -->
+
+    <div id="dvHome" data-role="page" data-transition="none">
+        <div id="dvHomeHeader" data-role="header" data-position="fixed" data-theme="b">
+            <a href="#dvPanel1" class="ui-btn ui-btn-inline ui-icon-bars ui-btn-icon-notext ui-corner-all ui-shadow ui-nodisc-icon">Panel</a>
+            <h3>Home</h3>
+        </div>
+        <div id="dvHomeMain" data-role="main" class="ui-content">
+            <h3>Active Areas</h3>
+            <br>
+            <ul data-role="listview" class="ui-content" data-theme="a">
+                <li><a data-transition="none" href="#dvHall">Hall</a></li>
+                <li><a data-transition="none" href="#dvKitchen">Kitchen</a></li>
+                <li><a data-transition="none" href="#dvBathroom">Bathroom</a></li>
+                <li><a data-transition="none" href="#dvBedroom">Bedroom</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+    <!-- ==================== Hall page ==================== -->
+
+    <div id="dvHall" data-role="page" data-transition="none">
+        <div data-role="header" id="dvHallHeader" data-position="fixed" data-theme="b">
+            <a href="#dvPanel1" class="ui-btn ui-btn-inline ui-icon-bars ui-btn-icon-notext ui-corner-all ui-shadow ui-nodisc-icon">Panel</a>
+            <h3>Hall</h3>
+        </div>
+        <div id="dvhallMain" data-role="main" class="ui-content">
+            <h3>Devices Status</h3>
+        </div>
+    </div>
+
+    <!-- ==================== Kitchen page ==================== -->
+
+    <div id="dvKitchen" data-role="page" data-transition="none">
+        <div data-role="header" id="dvKitchenHeader" data-position="fixed" data-theme="b">
+            <a href="#dvPanel1" class="ui-btn ui-btn-inline ui-icon-bars ui-btn-icon-notext ui-corner-all ui-shadow ui-nodisc-icon">Panel</a>
+            <h3>Kitchen</h3>
+        </div>
+        <div id="dvKitchenMain" data-role="main" class="ui-content">
+            <h3>Devices Status</h3>
+        </div>
+    </div>
+
+    <!-- ==================== Bathroom page ==================== -->
+
+    <div id="dvBathroom" data-role="page" data-transition="none">
+        <div data-role="header" id="dvBathroomHeader" data-position="fixed" data-theme="b">
+            <a href="#dvPanel1" class="ui-btn ui-btn-inline ui-icon-bars ui-btn-icon-notext ui-corner-all ui-shadow ui-nodisc-icon">Panel</a>
+            <h3>Bathroom</h3>
+        </div>
+        <div id="dvBathroomMain" data-role="main" class="ui-content">
+            <h3>Devices Status</h3>
+        </div>
+    </div>
+
+    <!-- ==================== Bathroom page ==================== -->
+
+    <div id="dvBedroom" data-role="page" data-transition="none">
+        <div data-role="header" id="dvBedroomHeader" data-position="fixed" data-theme="b">
+            <a href="#dvPanel1" class="ui-btn ui-btn-inline ui-icon-bars ui-btn-icon-notext ui-corner-all ui-shadow ui-nodisc-icon">Panel</a>
+            <h3>Bedroom</h3>
+        </div>
+        <div id="dvBedroomMain" data-role="main" class="ui-content">
+            <h3>Devices Status</h3>
+        </div>
+    </div>
+
+
+    <script type="application/javascript" src="js/event-handlers.js"></script>
+    <script type="application/javascript" src="js/page-loading.js"></script>
+    <script type="application/javascript" src="js/functions.js"></script>
+
+</body>
+
+</html>
